@@ -1,0 +1,16 @@
+{
+	"services": [
+		{
+			"name": "frontend",
+			"path": "client",
+			"build": "npm install && npm run build",
+			"start": "npx serve dist"
+		},
+		{
+			"name": "backend",
+			"path": "server",
+			"build": "npm install",
+			"start": "npm start"
+		}
+	]
+}
