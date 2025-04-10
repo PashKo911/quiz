@@ -1,27 +1,12 @@
 {
-	"$schema": "https://railway.com/railway.schema.json",
-	"services": [
-		{
-			"name": "frontend",
-			"root": "client",
-			"build": {
-				"builder": "nixpacks",
-				"buildCommand": "npm install && npm run build"
-			},
-			"deploy": {
-				"startCommand": "npx serve dist"
-			}
-		},
-		{
-			"name": "backend",
-			"root": "server",
-			"build": {
-				"builder": "nixpacks",
-				"buildCommand": "npm install"
-			},
-			"deploy": {
-				"startCommand": "npm start"
+	"build": {
+		"buildCommand": "cd client && npm install && npm run build && cd ../server && npm install",
+		"nixpacksPlan": {
+			"phases": {
+				"start": {
+					"cmds": ["cd server && npm start"]
+				}
 			}
 		}
-	]
+	}
 }
