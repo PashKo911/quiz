@@ -1,0 +1,29 @@
+@theme {
+	/* ! CLAMP */
+	--text-30-24: clamp(1.5rem, 1.393rem + 0.54vw, 1.875rem);
+	--text-24-18: clamp(1.125rem, 1.035rem + 0.45vw, 1.5rem);
+
+	--breakpoint-sm: 29.9988rem; /* 479.9808px */
+	--breakpoint-md: 47.9988rem; /* 767.98px */
+	--breakpoint-lg: 61.9988rem; /* 991.98px */
+	--breakpoint-xl: 89.9988rem; /*! 1439.98px */
+
+	--radius-sm: 0.3125rem;
+	--radius-md: 0.625rem;
+	--radius-lg: 0.9375rem;
+	--radius-xl: 1.25rem;
+	--radius-2xl: 1.5625rem;
+
+	--shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
+	--shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	--shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+	--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	--shadow-lg: 0 4px 6px rgb(0 0 0 / 0.1), 0 -4px 6px rgb(0 0 0 / 0.1);
+
+	--shadow-xl:
+		0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+	--shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	--inset-shadow-2xs: inset 0 1px rgb(0 0 0 / 0.05);
+	--inset-shadow-xs: inset 0 1px 1px rgb(0 0 0 / 0.05);
+	--inset-shadow-sm: inset 0 2px 4px rgb(0 0 0 / 0.05);
+}

@@ -1,0 +1,12 @@
+{
+	"build": {
+		"buildCommand": "npm install && npm run build",
+		"nixpacksPlan": {
+			"phases": {
+				"start": {
+					"cmds": ["npm start"]
+				}
+			}
+		}
+	}
+}

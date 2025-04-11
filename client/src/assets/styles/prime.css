@@ -1,0 +1,52 @@
+/* Primary and Surface Palettes */
+
+@theme {
+	--p-primary-50: #f0fdfa;
+	--p-primary-100: #ccfbf1;
+	--p-primary-200: #99f6e4;
+	--p-primary-300: #5eead4;
+	--p-primary-400: #2dd4bf;
+	--p-primary-500: #14b8a6;
+	--p-primary-600: #0d9488;
+	--p-primary-700: #0f766e;
+	--p-primary-800: #115e59;
+	--p-primary-900: #134e4a;
+	--p-primary-950: #042f2e;
+
+	--p-surface-0: #fafafa;
+	--p-surface-50: #f3f3f3;
+	--p-surface-100: #c7c7c7;
+	--p-surface-200: #9a9a9a;
+	--p-surface-300: #6e6e6e;
+	--p-surface-400: #414141;
+	--p-surface-500: #151515;
+	--p-surface-600: #121212;
+	--p-surface-700: #0f0f0f;
+	--p-surface-800: #0c0c0c;
+	--p-surface-900: #080808;
+	--p-surface-950: #050505;
+
+	--p-content-border-radius: 0.3125rem;
+}
+
+/* Light */
+/* :root */
+@theme inline {
+	--p-primary-color: var(--p-primary-500);
+	--p-primary-contrast-color: var(--p-surface-0);
+	--p-primary-hover-color: var(--p-primary-600);
+	--p-primary-active-color: var(--p-primary-700);
+	--p-content-border-color: var(--p-surface-200);
+	--p-content-hover-background: var(--p-surface-100);
+	--p-content-hover-color: var(--p-surface-800);
+	--p-highlight-background: var(--p-primary-50);
+	--p-highlight-color: var(--p-primary-700);
+	--p-highlight-focus-background: var(--p-primary-100);
+	--p-highlight-focus-color: var(--p-primary-800);
+	--p-text-color: var(--p-surface-700);
+	--p-text-hover-color: var(--p-surface-800);
+	--p-text-muted-color: var(--p-surface-500);
+	--p-text-hover-muted-color: var(--p-surface-600);
+
+	--color-primary-hover: var(--p-primary-hover-color);
+}

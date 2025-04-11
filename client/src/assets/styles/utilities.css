@@ -1,0 +1,20 @@
+@utility container {
+	max-width: 91.875rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
+}
+
+@utility p-50-20 {
+	padding: clamp(1.25rem, 0.714rem + 2.68vw, 3.125rem);
+}
+@utility l-50-20 {
+	left: clamp(1.25rem, 0.714rem + 2.68vw, 3.125rem);
+}
+@utility gy-32-25 {
+	row-gap: clamp(1.563rem, 1.438rem + 0.63vw, 2rem);
+}
+
+@custom-variant dark (&:where(.p-dark, .p-dark *));
+@custom-variant menu-open (&:where(.menu-open, .menu-open *));
