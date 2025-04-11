@@ -1,8 +1,15 @@
 {
+	"$schema": "https://railway.app/schema/railway.json",
 	"build": {
 		"buildCommand": "npm install && npm run build",
 		"nixpacksPlan": {
 			"phases": {
+				"install": {
+					"cmds": ["npm install"]
+				},
+				"build": {
+					"cmds": ["npm run build"]
+				},
 				"start": {
 					"cmds": ["npm start"]
 				}
