@@ -22,6 +22,7 @@
 			<Button
 				label="Try Again"
 				@click="onReset"
+				size="large"
 				class="mx-auto w-max min-w-[12.5rem]"
 			/>
 		</div>

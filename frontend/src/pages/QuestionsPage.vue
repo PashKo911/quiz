@@ -12,6 +12,7 @@
 				v-model="selectedAnswer"
 				:options="currentQuestion.options"
 				optionLabel="text"
+				size="large"
 				optionValue="_id"
 			/>
 
@@ -29,6 +30,7 @@
 				@click="nextQuestion"
 				class="mx-auto w-max min-w-40"
 				label="Next"
+				size="large"
 			/>
 		</div>
 	</main-layout>

@@ -2,7 +2,7 @@
 	<header-menu />
 	<main class="grow">
 		<Toast />
-		<div class="container pt-[7.5rem] pb-8">
+		<div class="container pt-[50px] pb-8">
 			<slot />
 		</div>
 	</main>
