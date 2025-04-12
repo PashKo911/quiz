@@ -71,8 +71,6 @@ import * as yup from 'yup'
 import { storeToRefs } from 'pinia'
 import { useAuthStore } from '@/stores/auth'
 import { useGeneralStore } from '@/stores/general'
-import { useRouter } from 'vue-router'
-
 import InputText from '@/volt/InputText.vue'
 import Password from '@/volt/Password.vue'
 import { Form } from '@primevue/forms'
@@ -112,7 +110,7 @@ const subText = computed(() => {
 const schema = yup.object().shape({
 	username: yup
 		.string()
-		.min(3, 'Min 3 characters')
+		.min(1, 'Min 3 characters')
 		.max(20, 'Max 20 characters')
 		.required('Required'),
 	password: yup.string().trim().min(6, 'Min 6 characters').required('Required'),
@@ -124,14 +122,10 @@ const resolver = ref(yupResolver(schema))
 
 const onFormSubmit = async ({ valid, values }) => {
 	if (valid) {
-		try {
-			if (isSignup.value) {
-				await signup(values.username, values.password)
-			} else {
-				await signin(values.username, values.password)
-			}
-		} catch (error) {
-			console.error(error)
+		if (isSignup.value) {
+			await signup(values.username, values.password)
+		} else {
+			await signin(values.username, values.password)
 		}
 	}
 }

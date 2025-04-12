@@ -3,7 +3,6 @@ import './assets/styles/index.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import PrimeVue from 'primevue/config'
-import StyleClass from 'primevue/styleclass'
 import ToastService from 'primevue/toastservice'
 
 import App from './App.vue'
@@ -18,7 +17,6 @@ app.use(router)
 app.use(PrimeVue, {
 	unstyled: true,
 })
-app.directive('styleclass', StyleClass)
 app.use(ToastService)
 
 app.mount('#app')
