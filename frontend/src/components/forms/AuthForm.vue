@@ -111,7 +111,7 @@ const schema = yup.object().shape({
 	username: yup
 		.string()
 		.min(1, 'Min 3 characters')
-		.max(20, 'Max 20 characters')
+		.max(254, 'Max 254 characters')
 		.required('Required'),
 	password: yup.string().trim().min(6, 'Min 6 characters').required('Required'),
 })

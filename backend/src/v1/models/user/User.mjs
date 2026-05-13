@@ -34,24 +34,17 @@ const userSchema = new Schema({
 	},
 })
 
-userSchema.pre('save', async function (next) {
-	if (!this.isModified('password')) {
-		return next()
-	}
+userSchema.pre('save', async function () {
+	if (!this.isModified('password')) return
+
 	const salt = await bcrypt.genSalt(10)
 	this.password = await bcrypt.hash(this.password, salt)
-	next()
 })
 
-userSchema.pre('deleteOne', async function (next) {
-	try {
-		const userId = this.getQuery()._id || this._conditions._id
-		const res = await mongoose.model('QuizAttempt').deleteMany({ userId })
-		next()
-	} catch (error) {
-		console.error(error)
-		next(error)
-	}
+userSchema.pre('deleteOne', { document: false, query: true }, async function () {
+	const userId = this.getQuery()._id
+	if (!userId) return
+	await mongoose.model('QuizAttempt').deleteMany({ userId })
 })
 
 userSchema.methods.validPassword = async function (password) {

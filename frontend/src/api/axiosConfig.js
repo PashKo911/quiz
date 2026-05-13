@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useAuthStore } from '@/stores/auth'
 import router from '@/router'
+import { useServerWakeState } from '@/composables/useServerWakeState'
 
 const API_VERSION = import.meta.env.VITE_APP_API_VERSION
 
@@ -15,8 +16,12 @@ const apiClient = axios.create({
 	},
 })
 
+const { beginBackendWakeCheck, markBackendAwake } = useServerWakeState()
+
 apiClient.interceptors.request.use(
 	(config) => {
+		beginBackendWakeCheck()
+
 		const authStore = useAuthStore()
 		const token = authStore.token
 		if (token) {
@@ -28,8 +33,13 @@ apiClient.interceptors.request.use(
 )
 
 apiClient.interceptors.response.use(
-	(response) => response,
+	(response) => {
+		markBackendAwake()
+		return response
+	},
 	(error) => {
+		markBackendAwake()
+
 		if (error.response?.status === 401) {
 			const authStore = useAuthStore()
 			authStore.logout()
