@@ -1,49 +1,55 @@
 # 🧠 Fullstack Quiz App (Vue 3 + Node.js)
 
-Fullstack test assignment for a Fullstack Developer position.  
-A small quiz application with authentication, role-based access, admin panel, and Telegram Web App support.
+Fullstack test project for a Fullstack Developer position.  
+Quiz application with authentication, admin panel, and Telegram Web App support.
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Demo
 
-- 🌐 Web App (Render): https://your-render-deploy-link.com
-- 📱 Telegram Web App: https://your-telegram-webapp-link.com
+- 🌐 Web: https://quiz-2373.onrender.com/
+- 📱 Telegram Web App: https://t.me/Quiz91_bot/Quiz91
 
 ---
 
-## 🔐 Demo Admin Account
+## 🔐 Demo Admin
 
 - Email: `admin@test.com`
 - Password: `admin123`
 
 ---
 
-## 📌 Features
+## ✨ Features
 
 ### 👤 User
 
-- Registration / Login (JWT authentication)
+- JWT authentication (register / login)
 - Quiz (5 questions)
-- Submit answers and store results
-- View quiz result after completion
+- Submit answers & view result
+- Store quiz history
 
 ### 🛠 Admin
 
-- View users list
-- View users quiz attempts
-- Visual check of correct / incorrect answers
+- Users management
+- View quiz attempts
+- Check correct / incorrect answers
 - Delete users
 
 ---
 
 ## 📱 Telegram Web App
 
-This project includes integration with **Telegram Web Apps**, allowing users to:
+- Launch quiz inside Telegram
+- Shared auth with backend API
+- WebApp-compatible UX
 
-- Open the quiz directly inside Telegram
-- Use the same authentication flow
-- Work with backend API in WebApp environment
+---
+
+## ⚙️ CI/CD
+
+- GitHub Actions (lint + build)
+- Render auto-deploy on `main` push
+- Separate frontend/backend workflows with path filters
 
 ---
 
@@ -51,26 +57,15 @@ This project includes integration with **Telegram Web Apps**, allowing users to:
 
 ### Frontend
 
-- Vue 3 (Composition API)
-- Vue Router
-- Pinia
-- Axios
-- TailwindCSS
-- PrimeVue
-- Yup (validation)
+Vue 3, Vue Router, Pinia, Axios, TailwindCSS, PrimeVue, Yup
 
 ### Backend
 
-- Node.js + Express
-- MongoDB + Mongoose
-- JWT authentication
-- bcryptjs
-- express-validator
-- Helmet, CORS, Morgan
+Node.js, Express, MongoDB (Mongoose), JWT, bcryptjs, express-validator, Helmet, CORS, Morgan
 
 ---
 
-## ⚙️ Setup
+## 🚀 Setup
 
 ### Backend
 
